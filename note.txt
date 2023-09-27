@@ -1,0 +1,47 @@
+Modules:
+
+- Modules are used to encapsulate and organize different parts of your application.
+- They define the scope of the application and group related components like controllers, services, and providers together.
+- Modules are where you import and configure dependencies, including other modules and any global settings.
+- You can think of modules as the building blocks of your NestJS application.
+Controllers:
+
+- Controllers handle incoming HTTP requests and define the routes for your application.
+- They are responsible for processing requests, invoking the appropriate services to perform business logic, and returning responses.
+- Controllers contain methods (actions) that are annotated with decorators like @Get, @Post, @Put, etc., to define the route handlers.
+Services:
+
+- Services contain the business logic of your application.
+- They encapsulate the functionality that is not directly related to processing HTTP requests but is necessary to implement the application's features.
+- Services are often used to interact with databases, perform data manipulation, and implement various application-specific logic.
+- Controllers delegate the handling of business logic to services.
+- Here's a more detailed breakdown of the responsibilities of each component:
+
+Modules:
+
+- Define the boundaries of your application.
+- Import and configure dependencies, including other modules.
+- Declare providers (services) that can be injected into controllers.
+- Can be organized by features, allowing you to create reusable and maintainable code.
+- Controllers:
+
+- Define the routes and route handlers for HTTP requests.
+- Receive incoming requests, validate input data, and invoke services to perform actions.
+- Use decorators like @Get, @Post, etc., to specify the route and HTTP method for each action.
+- Optionally handle request and response objects for more fine-grained control.
+Services:
+
+- Contain the application's business logic and core functionality.
+- Encapsulate data manipulation, interactions with databases, external APIs, and any other non-HTTP-related operations.
+- Can be injected into controllers to provide separation of concerns and maintainability.
+- Promote reusability and testability since they can be easily mocked during testing.
+In summary, NestJS follows the principle of separation of concerns, where modules organize your application, 
+controllers handle HTTP requests, and services encapsulate business logic. This separation makes your code more maintainable, testable, and scalable.
+
+
+
+
+
+
+
+
