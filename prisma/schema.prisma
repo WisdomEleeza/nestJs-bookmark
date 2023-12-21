@@ -11,15 +11,15 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  email String @unique
+  email          String @unique
   hashedPassword String
 
   firstName String?
-  lastName String?
+  lastName  String?
 
   // Define the relationship to bookmarks
   // This field is an array of Bookmark objects, establishing a one-to-many relationship where one user can have multiple bookmarks.
@@ -28,17 +28,17 @@ model User {
   @@map("users")
 }
 
-model Bookmark { 
-  id Int @id @default(autoincrement())
+model Bookmark {
+  id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  title String
+  title       String
   description String?
-  link String
+  link        String
 
   userId Int
-  users User @relation(fields: [userId], references: [id])
+  users  User @relation(fields: [userId], references: [id])
 
   @@map("bookmarks")
 }
