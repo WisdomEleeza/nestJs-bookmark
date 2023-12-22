@@ -2,9 +2,11 @@ import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthDto } from './dto/auth.dto';
 
+// controllers are responsible for handling incoming response and request ...
+
 @Controller('auth')
 export class AuthController {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) {} // Dependecy Injection
 
   @Post('signup')
   signup(@Body() dto: AuthDto) {

@@ -1,3 +1,31 @@
+1 - nest new project-file-name
+2 - npm i -g @nestjs/cli
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Modules:
 
 - Modules are used to encapsulate and organize different parts of your application.

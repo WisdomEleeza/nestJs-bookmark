@@ -7,6 +7,9 @@ import { ForbiddenException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 
+// providers or service are responsible for handling business logic
+// With the service we use the decorator @Injectable to indicate that it is Injectable
+
 @Injectable()
 export class AuthService {
   constructor(
