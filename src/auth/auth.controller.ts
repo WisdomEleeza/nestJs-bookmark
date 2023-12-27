@@ -8,16 +8,16 @@ import { AuthDto } from './dto/auth.dto';
 export class AuthController {
   constructor(private authService: AuthService) {} // Dependecy Injection
 
+  // /auth/signup
   @Post('signup')
   signup(@Body() dto: AuthDto) {
     // console.log({ dto });
-    return this.authService.signup(dto);
+    return this.authService.signup(dto)
   }
 
+  // /auth/signin
   @Post('/signin')
   signin(@Body() dto: AuthDto) {
     return this.authService.signin(dto);
   }
 }
-
-// npm install && npm build build command, start command: node dist/index.js

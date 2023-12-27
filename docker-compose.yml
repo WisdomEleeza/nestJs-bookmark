@@ -1,16 +1,16 @@
-version: '24.0'
+version: '3.9'
 
 services:
   bookmark:
-    image: postgres:15
+    image: postgres:latest
     ports:
       - "5434:5432"
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: nestJS
+      POSTGRES_PASSWORD: 024Wisdom@29
+      POSTGRES_DB: Bookmark
     networks:
-      - learningNestJS
+      - nest-bookmark
 
 networks:
-  learningNestJS:
+  nest-bookmark:
