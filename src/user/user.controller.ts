@@ -4,6 +4,7 @@ import { AuthGuard } from '@nestjs/passport';
 // controllers are responsible for handling incoming response and request ...
 
 @Controller('users')
+// endpoint: /users/me
 export class UserController {
   @UseGuards(AuthGuard('jwt'))
   @Get('me')
