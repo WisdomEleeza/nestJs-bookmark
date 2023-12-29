@@ -4,7 +4,18 @@ services:
   bookmark:
     image: postgres:latest
     ports:
-      - "5434:5432"
+      - '5434:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 024Wisdom@29
+      POSTGRES_DB: Bookmark
+    networks:
+      - nest-bookmark
+
+  test-bookmark:
+    image: postgres:latest
+    ports:
+      - '5434:5432'
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 024Wisdom@29

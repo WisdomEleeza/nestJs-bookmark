@@ -1,7 +1,7 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
 // import { AuthGuard } from '@nestjs/passport';
 import JwtGuard from '../auth/guard/jwt.guard';
-import { GetUser } from 'src/auth/decorator';
+import { GetUser } from '../auth/decorator'
 import { User } from '@prisma/client';
 
 // controllers are responsible for handling incoming response and request ...
